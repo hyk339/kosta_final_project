@@ -190,7 +190,7 @@
 				<tr th:each="classHistory:${classHistoryList}"> 
 					<td th:text="${classHistory.classes.lecture.course.courseName}" class="text-center"><a class="btn-link" href="#">과정명</a></td>
 					<td th:text="${classHistory.classes.teacher.teacherName}" class="text-center">강사명</td>
-					<td th:text="${classHistory.classes.classOpenDate}+' ~ '+${classHistory.classes.classOpenDate}" class="text-center">기간</td>
+					<td th:text="${classHistory.classes.classOpenDate}+' ~ '+${classHistory.classes.classCloseDate}" class="text-center">기간</td>
 					<td th:if="${#strings.toString(classHistory.classHistoryState)}=='WAIT'" th:text="대기" class="text-center">신청상태</td>
 					<td th:if="${#strings.toString(classHistory.classHistoryState)}=='CANCEL'" th:text="취소" class="text-center">신청상태</td>
 					<td th:if="${#strings.toString(classHistory.classHistoryState)}=='COMMIT'" th:text="확정" class="text-center">신청상태</td>
